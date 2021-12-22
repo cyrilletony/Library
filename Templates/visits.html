@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Visits</title>
+	<style>
+	
+	#table2 {
+    border-collapse: collapse;
+    width: 100%;
+	}
+
+	#table2 th, #table2 td {
+	    text-align: left;
+	    padding: 8px;
+	}
+
+	#table2 tr:nth-child(even){background-color: #f2f2f2}
+
+	#table2 th {
+	    background-color: #4CAF50;
+	    color: white;
+	}
+	#table2 tr:hover, #table2 tr:nth-child(even):hover{
+		background: grey;
+	}
+	span{
+		font-size: 20px;
+		font: bold;
+	}
+	button{
+		color: white;
+		background-color: blue;
+		border: 2px solid blue;
+	}
+	</style>
+</head>
+<body>
+<table style="" id="table2">
+		<thead>
+			<tr style="background-color: #00802b;">
+				<th style="background-color: #00802b;" colspan="3">Physical Visits by Members</th>
+				<th style="background-color: #00802b;"><a href="/"><button>Back Home</button></a></th>
+			</tr>
+			<tr><th>SSN</th>
+				<th>Librarian Name</th>
+				<th>Member Name</th>
+				<th>Time(Hours)</th>
+			</tr>
+		</thead>
+		<tbody>
+			{%for visit in visits%}
+			<tr><td>{{visit.SSN}}</td>
+				<td>{{visit.name}}</td>
+				<td>{{visit.Name_On_Card}}</td>
+				<td>{{visit.Grace_Period}}</td>
+			</tr>
+			{%endfor%}
+		</tbody>
+	</table>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Check In</title>
+</head>
+<body style="display: flex; justify-content: center;">
+	<div style="width: 300px; border: 1px solid black; padding: 10px;">
+	<form action="/checkinbook" method="post">
+		<span>ISBN</span><br>
+		<input type="number" name="ISBN" style="width:100%;"><br>
+		<span>SSN</span><br>
+		<input type="number" name="ssn" style="width:100%;"><br>
+
+		<span>Remark</span><br>
+		<textarea type="text" name="remark" style="width:100%;"></textarea><br>
+		<span>Librarian</span><br>
+		<input type="number" name="libssn" style="width:100%;"><br>
+		
+		<hr>
+		<input type="submit" name="submit" value="Check In" style="width:100%;">
+	</form>
+</div>
+
+</body>
+</html>

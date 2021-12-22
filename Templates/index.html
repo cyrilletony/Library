@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Library</title>
+	<style>
+	
+	#table2 {
+    border-collapse: collapse;
+    width: 100%;
+	}
+
+	#table2 th, #table2 td {
+	    text-align: left;
+	    padding: 8px;
+	}
+
+	#table2 tr:nth-child(even){background-color: #f2f2f2}
+
+	#table2 th {
+	    background-color: #4CAF50;
+	    color: white;
+	}
+	#table2 tr:hover, #table2 tr:nth-child(even):hover{
+		background: grey;
+	}
+	span{
+		font-size: 20px;
+		font: bold;
+	}
+	button{
+		color: white;
+		background-color: blue;
+		border: 2px solid blue;
+	}
+	</style>
+
+</head>
+<body>
+<table style="width: 100%;border: 1px solid #00802b;;">
+	<tr style="">
+		<td style="color:white;background-color: #00802b;">
+			<span>Library Services</span>
+		</td>
+		<td>
+			<a href="/addlibrarian"><button>Add Librarian</button></a>
+		</td>
+		<td>
+			<a href="/addbook"><button>Add Books</button></a>
+		</td>
+		<td>
+			<a href="/addmember"><button>Add Members</button></a>
+		</td>
+		<td>
+			<a href="/bookcheckout"><button>Borrow A Book</button></a>
+		</td>
+		<td>
+			<a href="/checkin"><button>Book Check In</button></a>
+		</td>
+		<td>
+			<a href="/visits"><button>Physical Visits Report</button></a>
+		</td>
+	</tr>
+</table>
+<hr>
+
+	<div style="">
+		
+	<table style="" id="table2">
+		<thead>
+			<tr style="background-color: #00802b;">
+				<th style="background-color: #00802b;" colspan="4">Librarians</th>
+			</tr>
+			<tr><th>SSN</th>
+				<th>Name</th>
+				<th>Phone Number</th>
+				<th>Designation</th>
+			</tr>
+		</thead>
+		<tbody>
+			{%for staff in results%}
+			<tr><td>{{staff.SSN}}</td>
+				<td>{{staff.name}}</td>
+				<td>{{staff.Phone_Number}}</td>
+				<td>{{staff.Designation}}</td>
+			</tr>
+			{%endfor%}
+		</tbody>
+	</table>
+	</div>
+<hr>
+	<div style="">
+		
+	<table style="" id="table2">
+		<thead>
+			<tr style="background-color: #00802b;">
+				<th style="background-color: #00802b;" colspan="6">Books</th>
+			</tr>
+			<tr><th>ISBN</th>
+				<th>Title</th>
+				<th>Author</th>
+				<th>Area Of Subject</th>
+				<th>Librarian Name</th>
+				<th>Date Added</th>
+			</tr>
+		</thead>
+		<tbody>
+			{%for book in books%}
+			<tr><td>{{book.ISBN}}</td>
+				<td>{{book.Title}}</td>
+				<td>{{book.Author}}</td>
+				<td>{{book.Area_Of_Subject}}</td>
+				<td>{{book.name}}</td>
+				<td>{{book.Added_On}}</td>
+			</tr>
+			{%endfor%}
+		</tbody>
+	</table>
+	</div>
+	
+<hr>
+<div style="width:100%;">
+		
+	<table style="" id="table2" style="width:100%;">
+		<thead>
+			<tr style="background-color: #00802b;">
+				<th style="background-color: #00802b;" colspan="10">Members</th>
+			</tr>
+			<tr>
+				<th>Name</th>
+				<th>Address</th>
+				<th>Phone Number</th>
+				<th>Card Number</th>
+				<th>Card Created By (Librarian)</th>
+				<th>Created On</th>
+				<th>Date Of Issue</th>
+				<th>Date of Expiry</th>
+				<th>Added By (Librarian)</th>
+				<th>Action</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			{%for member in members%}
+			<tr><td>{{member.Name_On_Card}}</td>
+				<td>{{member.Campus_Addr}}</td>
+				<td>{{member.Phone_Number}}</td>
+				<td>{{member.Card_Number}}</td>
+				<td>{{member.name}}</td>
+				<td>{{member.Added_On}}</td>
+				<td>{{member.Date_Of_Issue}}</td>
+				<td>{{member.Date_Of_Expiry}}</td>
+				<td>{{member.name2}}</td>
+				<td>
+					<a href="/renewal/{{member.SSN}}"><button style="background-color:red; border-color: red; color: white;">Renew membership</button></a>
+				</td>
+			</tr>
+			{%endfor%}
+		</tbody>
+	</table>
+	</div>
+</body>
+</html>

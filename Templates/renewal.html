@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Renew Membership</title>
+</head>
+<body style="display: flex; justify-content: center;">
+	<div style="width: 300px; border: 1px solid black; padding: 10px;">
+	<form action="/renewdate" method="post">
+		<h3>ADD Member</h3>
+		<span>Name</span><br>
+		<input type="number" name="ssn" value="{{results.SSN}}" style="width:100%;" hidden="">
+		<input type="text" name="name" placeholder="{{results.Name_On_Card }}" style="width:100%;" disabled="" value="{{results.Name_On_Card }}">
+		<span>Date of Issue</span><br>
+		<input type="date" placeholder="{{results.Date_Of_Issue}}" name="date_issue" disabled="" value="{{results.Date_Of_Issue}}" style="width:100%;" ><br>
+		<span>Expiry Date</span><br>
+		<input type="date" placeholder="{{results.Date_Of_Expiry}}" disabled="" name="date_expiry" style="width:100%;" value="{{results.Date_Of_Expiry}}"><br>
+		<span>Added On</span><br>
+		<input type="date" placeholder="{{results.Added_On}}" disabled="" name="added_on" style="width:100%;" value="{{results.Added_On}}"><br>
+		<span>Renewed expiry date</span><br>
+		<input type="date" name="new" style="width:100%;"><br>
+		<hr>
+		<input type="submit" name="submit"style="width:100%;" value="Add Book">
+	</form>
+</div>
+
+</body>
+</html>

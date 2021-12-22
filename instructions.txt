@@ -1,0 +1,20 @@
+After unziping the project.rar to project folder, copy it(the folder) to desktop.
+Apps and software you need to install 
+1. XAMPP
+2. Python
+Python frame wor you need to install
+1. Flask framework. On your cmd terminal type
+	"pip install flask"
+2. Pymysql for mysql. use this 
+	"pip install pymysql"
+Turn on XAMPP then start APACHE and MYSQL. Then click admin on mysql to access the database. Create a database and name it library, then import library.sql file in the project folder.
+	
+Open cmd or your terminal and navigate to the project folder on your desktop using
+ "cd Desktop/project"
+and then click enter, then type
+ "flask run"
+to run the program.
+
+A link will be provided to you by flask on your terminal, i.e "http://localhost:5000", copy and paste it on you browser and you have your project running.
+
+thank you1

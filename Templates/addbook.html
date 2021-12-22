@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Add Librarian</title>
+</head>
+<body style="display: flex; justify-content: center;">
+	<div style="width: 300px; border: 1px solid black; padding: 10px;">
+	<form action="/addbooks" method="post">
+		<h3>ADD Book</h3>
+		<span>ISBN</span><br>
+		<input type="number" name="ISBN" style="width:100%;"><br>
+		<span>Title</span><br>
+		<input type="text" name="title" style="width:100%;"><br>
+		<span>Author</span><br>
+		<input type="text" name="author" style="width:100%;"><br>
+		<span>Area Of Subject</span><br>
+		<textarea type="text" name="area_of_subject" style="width:100%;"></textarea><br>
+		<span>Added On</span><br>
+		<input type="date" name="added_on" style="width:100%;"><hr>
+		<input type="submit" name="submit"style="width:100%;" value="Add Book">
+	</form>
+</div>
+
+</body>
+</html>
